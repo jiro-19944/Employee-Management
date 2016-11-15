@@ -1,0 +1,57 @@
+#header
+{
+	background-color: #4172AA;
+	overflow: hidden;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	width: auto;
+	height: auto;
+}
+
+#logo
+{
+	border-radius: 50px 50px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.header_right
+{
+	text-align: right;
+	margin-top: 15px;
+	margin-right: 20px;
+	float: right;
+	color: white;
+	text-decoration: none;
+}
+
+#about_employees
+{
+	margin-left: 300px
+}
+
+#header_ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header_ul li
+{
+	float: left;
+	margin-left: 1px;
+	margin-right: 1px;
+	background-color: #4C87BF;
+}
+
+#header_ul li a
+{
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+}
