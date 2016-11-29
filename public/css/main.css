@@ -28,6 +28,7 @@
 #events_ul li button
 {
     color: #4C87BF;
+    outline: 0;
     float: left;
     padding: 5px 20px;
     padding-left: 30px;
@@ -38,9 +39,22 @@
     background-color: white;
 }
 
+#events_ul li button:active {
+	position: relative;
+	top: 1px;
+}
+
 .input_events
 {
 	background-image: url("../resources/plus.jpg");
     background-repeat: no-repeat;
     background-position: 8px;
+}
+
+#aaa
+{
+	float: left;
+	background-image: url("../resources/dropDownIcon.png");
+	background-repeat: no-repeat;
+	background-position: 100px;
 }
