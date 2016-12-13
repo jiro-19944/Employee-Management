@@ -51,10 +51,38 @@
     background-position: 8px;
 }
 
-#aaa
+#third_li
 {
 	float: left;
 	background-image: url("../resources/dropDownIcon.png");
 	background-repeat: no-repeat;
 	background-position: 100px;
+}
+
+#basic_info
+{
+	margin-top: 90px;
+	margin-left: 262px;
+}
+
+#basic_info_ul
+{
+	list-style-type: none;
+}
+
+#basic_info_ul li
+{
+	float: left;
+	background-color: white;
+	text-align: center;
+	width: 120px;
+}
+
+#basic_info_ul li a
+{
+    color: #3096AC;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    display: block;
 }
