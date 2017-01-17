@@ -62,27 +62,51 @@
 #basic_info
 {
 	margin-top: 90px;
-	margin-left: 262px;
+	margin-left: 260px;
 }
 
-#basic_info_ul
+#personal_info_title_ul
 {
 	list-style-type: none;
 }
 
-#basic_info_ul li
+#personal_info_title_ul li
 {
 	float: left;
 	background-color: white;
 	text-align: center;
-	width: 120px;
+	width: 125px;
+	color: #3096AC;
 }
 
-#basic_info_ul li a
+.personal_info_ul
 {
-    color: #3096AC;
+	float: left;
+	list-style-type: none;
+	margin-top: 15px;
+	margin-left: 260px;
+}
+
+.personal_info_ul li:first-child img
+{
+    width: 70px;
+	height: 80px;
+    content: url("../resources/logo.png");
+}
+
+.personal_info_ul li
+{
+	display: table;
+	float: left;
+	text-align: center;
+	width: 125px;
+	height: 80px;
+	word-spacing: 125px;
+}
+
+.personal_info_ul li p
+{
+	display: table-cell;
+    vertical-align: middle;
     text-align: center;
-    padding: 5px 20px;
-    text-decoration: none;
-    display: block;
 }
