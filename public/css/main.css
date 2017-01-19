@@ -62,51 +62,31 @@
 #basic_info
 {
 	margin-top: 90px;
-	margin-left: 260px;
+	margin-left: 290px;
 }
 
-#personal_info_title_ul
+#personal_info_table
 {
-	list-style-type: none;
+	background-color: 
 }
 
-#personal_info_title_ul li
+#personal_info_table th
 {
-	float: left;
-	background-color: white;
-	text-align: center;
 	width: 125px;
 	color: #3096AC;
 }
 
-.personal_info_ul
-{
-	float: left;
-	list-style-type: none;
-	margin-top: 15px;
-	margin-left: 260px;
-}
-
-.personal_info_ul li:first-child img
+#personal_info_table td:first-child img
 {
     width: 70px;
 	height: 80px;
     content: url("../resources/logo.png");
 }
 
-.personal_info_ul li
+#personal_info_table td
 {
-	display: table;
-	float: left;
 	text-align: center;
 	width: 125px;
 	height: 80px;
 	word-spacing: 125px;
-}
-
-.personal_info_ul li p
-{
-	display: table-cell;
-    vertical-align: middle;
-    text-align: center;
 }
