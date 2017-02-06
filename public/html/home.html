@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HEAD>
+	<TITLE>Instigate Mobile</TITLE>
+		<script src="../lib/jquery-3.1.1.min.js"></script>
+		<script src="../js/indexHtml.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/header.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+</HEAD>
+<HTML>
+	<div id="header">
+	    <ul id="ul">
+		    <li id="signin">
+			    <a id="signin-trigger" href="#">Sign in <span>▼</span>
+			    </a> |
+			    <div id="signin-content" class="admin-content nonClicking">
+			    	<form action="/signIn" method="post">
+			    		<div id="inputs" class="nonClicking">
+			    			<input class="nonClicking" type="email" name="Email" placeholder="Your email address" required>   
+			            	<input class="nonClicking" type="password" name="Password" placeholder="Password" required>
+			            </div>
+			            <div class="actions nonClicking">
+			            	<input type="submit" class="submit nonClicking" value="Sign in">
+			            	<label><a href="#">Forgot password?</a></label>
+			            </div>
+			        </form>
+			    </div>
+		    </li>
+		    <li id="signup">
+		    	<a id="signup-trigger" href="#">Sign up <span>▼</span>
+		    	</a> |
+		    	<div id="signup-content" class="admin-content nonClicking" style="right: 112px">
+					<form action="/signUp" method="post">
+			    		<div id="inputs" class="nonClicking">
+			    			<input class="nonClicking" type="email" name="Email" placeholder="Your email address" required>   
+			            	<input class="nonClicking" type="password" name="Password" placeholder="Password" required>
+			            </div>
+			            <div class="actions">
+			            	<input type="submit" class="submit nonClicking" value="Sign up">
+			            </div>
+			        </form>
+			    </div>
+		    </li>
+		    <li id="about">
+		    	<a href="#">About</a> |
+		    </li>
+		    <li id="help">
+		    	<a href="#">Help</a>
+		    </li>
+	    </ul>
+	    <div>
+    		<img id="logo" src="../resources/logo.png">
+    	</div>
+    	<div id="pages">
+    		<ul id="header_ul">
+    			<li id="employee" style="background-color:white"><a href="#" style="color:#4C87BF">Information</a></li>
+    			<li id="galary" class="aaaaaaaaaaaaaaaa"><a href="#">Galary</a></li>
+    			<li id="salary"><a href="#">Travel</a></li>
+    			<li id="footballTeam"><a href="#">Partners</a></li>
+    		</ul>
+    	</div>
+	</div>
+</HTML>

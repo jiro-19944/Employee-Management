@@ -26,7 +26,7 @@
 
 #pages
 {
-	margin-left: 300px
+	margin-left: 380px;
 }
 
 #header_ul
@@ -52,4 +52,105 @@
     text-align: center;
     padding: 5px 20px;
     text-decoration: none;
+}
+
+#ul {
+  list-style: none;
+  float: right;   
+}
+
+#signin,
+#signup,
+#help,
+#about 
+{
+  float: left;          
+}
+
+
+#signin-trigger,
+#signup-trigger,
+#help a,
+#about a
+{
+  display: inline-block;
+  display: inline;
+  height: 25px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.admin-content 
+{
+  display: none;
+  position: absolute; 
+  padding: 15px;
+  border-radius: 3px 0 3px 3px;
+  right: 217px;
+  width: 250px;
+  border-radius: 3px 0 0 3px;
+  border: solid black;
+}
+
+/*--------------------*/
+
+#inputs input 
+{
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+}
+
+#inputs input:focus 
+{
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#signin .actions,
+#signup .actions 
+{
+  margin: 10px 0 0 0;
+}
+
+.submit 
+{    
+  background-color: #d14545;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+}
+
+#signin label a
+{
+  float: right;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+#signin input
+#signup input
+{
+  position: relative;
+  top: 2px;
+  right: 2px;
+  float: right;
+  line-height: 30px;
 }

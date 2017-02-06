@@ -4,9 +4,10 @@ var controller = require('./controller');
 
 module.exports = function() 
 {
-	router.get('/', controller.get);
+	router.get('/', controller.home);
 	console.log("router1111111111111111");
-	router.post('/post', controller.post);
+	router.post('/signIn', controller.signIn);
+	router.post('/signUp', controller.signUp);
 
 	return router;
 };
