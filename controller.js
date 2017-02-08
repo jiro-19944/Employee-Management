@@ -15,6 +15,11 @@ module.exports.signIn = function(req, res)
 	if(body.Email === a.Email && body.Password === a.Password)
 	{
 		console.log("/////////////////////////////////  " + a.Email);
+		res.render('./html/signedIn.html');
+	}
+	else
+	{
+		console.log("------------  invalid email or password ----------------");
 	}
 	// res.render('./html/index.html');
 	// res.end("++++++++++++++++++++++++ " + body.Password);
@@ -26,6 +31,6 @@ module.exports.signUp = function(req, res)
 	console.log("------------ post ------------ sign UP -----------  ");
 	a.Email = body.Email;
 	a.Password = body.Password;
-	// res.render('./html/index.html');
+	res.render('./html/home.html');
 	console.log("++++++++++++++++++++++++ greciiiiiiiiiiiiiii" + a.Email);
 };
