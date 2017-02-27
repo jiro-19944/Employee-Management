@@ -8,10 +8,6 @@ var checkAndConnectToDb = function()
 	{
 		isDbConnected = db.connectToDB(isDbConnected);
 	}
-	else
-	{
-		console.log("------------ DB is already conected -------------");
-	}
 }
 
 var checkAndGetDb = function()
@@ -19,10 +15,6 @@ var checkAndGetDb = function()
 	if(!myDb)
 	{
 		myDb = db.getDB();
-	}
-	else
-	{
-		console.log("------------ DB is already got -------------");
 	}
 }
 
@@ -34,27 +26,20 @@ module.exports.home = function(req, res)
 
 module.exports.signIn = function(req, res)
 {
+	var body = req.body;
 	checkAndConnectToDb();
 	checkAndGetDb();
-	var body = req.body;
 	myDb.collection('userPass', function(err, collection)
 	{
 		collection.findOne({email: body.email}, function(err, item)
 		{
-			if(!item)
+			if(!item || body.password != item.password)
 			{
-				console.log("Wrong username: Please sign up");
+				console.log("Wrong email or password: Please try again");
 			}
 			else
 			{
-				if(body.password == item.password)
-				{
-					res.render('./html/signedIn.html');
-				}
-				else
-				{
-					console.log("The password is wrong");
-				}
+				res.render('./html/signedIn.html');
 			}
 		});
 	});
@@ -63,12 +48,11 @@ module.exports.signIn = function(req, res)
 
 module.exports.signUp = function(req, res)
 {
+	var body = req.body;
 	checkAndConnectToDb();
 	checkAndGetDb();
-	var body = req.body;
 	myDb.createCollection('userPass', function(err, collection)
     {
     	collection.insert(body);
-    	console.log("++++++++++++++++++++++++ greciiiiiiiiiiiiiii");
     });
 };

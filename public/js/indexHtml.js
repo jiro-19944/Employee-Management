@@ -21,7 +21,7 @@ $(document).ready(function()
 
         $(this).toggleClass("active");
         $(this).toggleClass("nonClicking");
-        
+
         if($(this).hasClass("active"))
         {
             $(this).find("span").html("&#x25B2;")
@@ -32,7 +32,7 @@ $(document).ready(function()
         }
     });
 
-    $(document).click(function(e) 
+    $(document).click(function(e)
     {
         if((!$(e.target).hasClass("nonClicking") || e.target.id == "signup-trigger") &&
          (!$(e.target).hasClass("span") || e.target.id == "signUpSpan") && $("#signin-trigger").hasClass("active"))
