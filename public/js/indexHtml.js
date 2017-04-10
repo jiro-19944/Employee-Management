@@ -8,15 +8,15 @@ $(document).ready(function()
         $(this).find("a").css("color", "#4C87BF");
     });
 
-    $("#signin-trigger, #signup-trigger").click(function()
+    $("#signinTrigger, #signupTrigger").click(function()
     {
-        if(this.id == "signin-trigger")
+        if(this.id == "signinTrigger")
         {
-            $(this).next("#signin-content").slideToggle();
+            $(this).next("#signinContent").slideToggle();
         }
-        else if(this.id == "signup-trigger")
+        else if(this.id == "signupTrigger")
         {
-            $(this).next("#signup-content").slideToggle();
+            $(this).next("#signupContent").slideToggle();
         }
 
         $(this).toggleClass("active");
@@ -34,23 +34,44 @@ $(document).ready(function()
 
     $(document).click(function(e)
     {
-        if((!$(e.target).hasClass("nonClicking") || e.target.id == "signup-trigger") &&
-         (!$(e.target).hasClass("span") || e.target.id == "signUpSpan") && $("#signin-trigger").hasClass("active"))
+        if((!$(e.target).hasClass("nonClicking") || e.target.id == "signupTrigger") &&
+            (!$(e.target).hasClass("span") || e.target.id == "signUpSpan") && $("#signinTrigger").hasClass("active"))
         {
-            $("#signin-trigger").next("#signin-content").slideToggle();
-            $("#signin-trigger").find("span").html("&#x25BC;");
-            $("#signin-trigger").toggleClass("active");
-            $("#signin-trigger").toggleClass("nonClicking");
+            $("#signinTrigger").next("#signinContent").slideToggle();
+            $("#signinTrigger").find("span").html("&#x25BC;");
+            $("#signinTrigger").toggleClass("active");
+            $("#signinTrigger").toggleClass("nonClicking");
+            $("#signInUsername").val("");
+            $("#signInPassword").val("");
         }
-        else if((!$(e.target).hasClass("nonClicking") || e.target.id == "signin-trigger") && 
-            (!$(e.target).hasClass("span") || e.target.id == "signInSpan") && $("#signup-trigger").hasClass("active"))
+        else if((!$(e.target).hasClass("nonClicking") || e.target.id == "signinTrigger") && 
+                (!$(e.target).hasClass("span") || e.target.id == "signInSpan") && $("#signupTrigger").hasClass("active"))
         {
-            $("#signup-trigger").next("#signup-content").slideToggle();
-            $("#signup-trigger").find("span").html("&#x25BC;")
-            $("#signup-trigger").toggleClass("active");
-            $("#signup-trigger").toggleClass("nonClicking");
+            $("#signupTrigger").next("#signupContent").slideToggle();
+            $("#signupTrigger").find("span").html("&#x25BC;")
+            $("#signupTrigger").toggleClass("active");
+            $("#signupTrigger").toggleClass("nonClicking");
+            $("#signUpUsername").val("");
+            $("#signUpPassword").val("");
         }
-        
-    })
+    });
 
+    $("#submitForgot").click(function()
+    {
+        var gotUsername = $("#username").val();
+        console.log(gotUsername);
+        $.post("http://localhost:8080/checkUsername", { username : gotUsername }, function(data, status) {
+
+            if(data === "wrong username")
+            {
+                location.reload();
+            }
+            else
+            {
+                var question = data.question;
+                $("#username").val(question);
+                $("#addInputs").append('<input id="answer" type="text" name="answer" placeholder="Your answer" required>');
+            }
+        });
+    });
 });

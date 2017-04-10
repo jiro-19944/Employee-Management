@@ -68,8 +68,8 @@
 }
 
 
-#signin-trigger,
-#signup-trigger,
+#signinTrigger,
+#signupTrigger,
 #help a,
 #about a
 {
@@ -81,13 +81,13 @@
   color: white;
 }
 
-.admin-content 
+.adminContent
 {
   display: none;
   position: absolute; 
   padding: 15px;
   border-radius: 3px 0 3px 3px;
-  right: 217px;
+  right: 216px;
   width: 250px;
   border-radius: 3px 0 0 3px;
   border: solid black;
@@ -95,7 +95,7 @@
 
 /*--------------------*/
 
-#inputs input 
+.inputs input
 {
   background: #f1f1f1;
   padding: 6px 5px;
@@ -106,12 +106,40 @@
   box-shadow: 0 1px 1px #ccc inset;
 }
 
-#inputs input:focus 
+.inputs input:focus
 {
   background-color: #fff;
   border-color: #e8c291;
   outline: none;
   box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+#question
+{
+  color: #6A6A6A;
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.inputs input::-webkit-input-placeholder
+{
+  color: #6A6A6A;
+}
+.inputs input:-moz-placeholder
+{
+  color: #6A6A6A;
+}
+.inputs input::-moz-placeholder
+{
+  color: #6A6A6A;
+}
+.inputs input:-ms-input-placeholder
+{
+  color: #6A6A6A;
 }
 
 /*--------------------*/

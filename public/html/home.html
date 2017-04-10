@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <HEAD>
 	<TITLE>Instigate Mobile</TITLE>
-		<script src="../lib/jquery-3.1.1.min.js"></script>
-		<script src="../js/indexHtml.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/header.css">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<script src="../lib/jquery-3.1.1.min.js"></script>
+		<script src="../js/indexHtml.js"></script>
 </HEAD>
 <HTML>
 	<div id="header">
 	    <ul id="ul">
 		    <li id="signin">
-			    <a id="signin-trigger" href="#">Sign in <span id="signInSpan" class="span">▼</span>
+			    <a id="signinTrigger" href="#">Sign in <span id="signInSpan" class="span">▼</span>
 			    </a> |
-			    <div id="signin-content" class="admin-content nonClicking">
+			    <div id="signinContent" class="adminContent nonClicking">
 			    	<form action="/signIn" method="post">
-			    		<div id="inputs" class="nonClicking">
-			    			<input class="nonClicking" type="username" name="username" placeholder="Your username" required>   
-			            	<input class="nonClicking" type="password" name="password" placeholder="Password" required>
+						<div class="inputs" class="nonClicking">
+							<input id="signInUsername" class="nonClicking" type="username" name="username" placeholder="Your username" required>   
+							<input id="signInPassword" class="nonClicking" type="password" name="password" placeholder="Password" required>
 			            </div>
 			            <div class="actions nonClicking">
 			            	<input type="submit" class="submit nonClicking" value="Sign in">
-			            	<label><a href="#">Forgot password?</a></label>
+							<label><a href="http://localhost:8080/forgot">Forgot password?</a></label>
 			            </div>
 			        </form>
 			    </div>
-		    </li>
-		    <li id="signup">
-		    	<a id="signup-trigger" href="#">Sign up <span id="signUpSpan" class="span">▼</span>
-		    	</a> |
-		    	<div id="signup-content" class="admin-content nonClicking" style="right: 112px">
-					<form action="/signUp" method="post">
-			    		<div id="inputs" class="nonClicking">
-			    			<input class="nonClicking" pattern=".{5,20}" title="username and password must contain min 5 max 20 characters" type="username" name="username" placeholder="Your username" required>   
-			            	<input class="nonClicking" pattern=".{5,20}" title="username and password must contain min 5 max 20 characters" type="password" name="password" placeholder="Password" required>
+			</li>
+			<li id="signup">
+				<a id="signupTrigger" href="#">Sign up <span id="signUpSpan" class="span">▼</span>
+				</a> |
+					<div id="signupContent" class="adminContent nonClicking" style="right: 119px">
+					<form action="/signUp" method="post" id="questions">
+						<div class="inputs" class="nonClicking">
+							<input id="signUpUsername" class="nonClicking" pattern=".{5,20}" title="username must contain min 5 max 20 characters" type="username" name="username" placeholder="Your username" required>
+							<input id="signUpPassword" class="nonClicking" pattern=".{5,20}" title="password must contain min 5 max 20 characters" type="password" name="password" placeholder="Password" required>
+							<select id="question" class="nonClicking" name="question" form="questions" placeholder="Choose a question">
+								<option value="What is your dog name">What is your dog name</option>
+								<option value="aaaaa">What is your car model</option>
+								<option value="What is your school number">What is your school number</option>
+							</select>
+							<input class="nonClicking" type="text" name="answer" placeholder="answer" required>
 			            </div>
 			            <div class="actions">
 			            	<input type="submit" class="submit nonClicking" value="Sign up">
