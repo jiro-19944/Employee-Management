@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/header.css">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<script src="../lib/jquery-3.1.1.min.js"></script>
-		<script src="../js/indexHtml.js"></script>
+		<script src="../js/signinSignup.js"></script>
 </HEAD>
 <HTML>
 	<div id="header">
@@ -14,13 +14,13 @@
 			    </a> |
 			    <div id="signinContent" class="adminContent nonClicking">
 			    	<form action="/signIn" method="post">
-						<div class="inputs" class="nonClicking">
+						<div class="inputs nonClicking">
 							<input id="signInUsername" class="nonClicking" type="username" name="username" placeholder="Your username" required>   
 							<input id="signInPassword" class="nonClicking" type="password" name="password" placeholder="Password" required>
 			            </div>
 			            <div class="actions nonClicking">
 			            	<input type="submit" class="submit nonClicking" value="Sign in">
-							<label><a href="http://localhost:8080/forgot">Forgot password?</a></label>
+							<label><a id="forgotPass" href="http://localhost:8080/forgot">Forgot password?</a></label>
 			            </div>
 			        </form>
 			    </div>

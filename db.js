@@ -4,7 +4,6 @@ var mongoDB = {};
 
 module.exports = {
 	connectToDB: function() {
-		console.log("conecttttttttttttttttt");
 		MongoClient.connect(url, function(err, db) {
 		    if(err) {
 		    	return console.dir(err);
@@ -15,7 +14,6 @@ module.exports = {
 	},
 
 	getDB: function() {
-		console.log("get ------------------");
 		return mongoDB;
 	}
 };

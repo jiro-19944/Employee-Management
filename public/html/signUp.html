@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <HEAD>
-	<TITLE>New Password!</TITLE>
+	<TITLE>Sign up!</TITLE>
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/signInSignUp.css">
-	<script src="../lib/jquery-3.1.1.min.js"></script>
-	<script src="../js/forgotPass.js"></script>
 </HEAD>
 	<BODY>
 	    <div id="header">
@@ -18,16 +16,16 @@
 	    	</div>
 	    </div>
         <div class="signInSignUpPosition">
-	        <h1>Set your new password</h1>
-	        <div>
-	    		<div id="addInputs" class="inputs">
-	    			<input id="currentPassword" type="password" placeholder="Current password" required>
-	    			<input id="newPassword" type="password" placeholder="New password" required>
+	        <h1>Please sign up</h1>
+	        <form action="/signUp" method="post">
+	    		<div class="inputs">
+	    			<input pattern=".{5,20}" title="username and password must contain min 5 max 20 characters" type="username" name="username" placeholder="Your username" required>   
+	            	<input pattern=".{5,20}" title="username and password must contain min 5 max 20 characters" type="password" name="password" placeholder="Password" required>
 	            </div>
 	            <div class="actions">
-	            	<button id="submitForgot" class="submit">Next</button>
+	            	<input type="submit" class="submit" value="Sign up">
 	            </div>
-	        </div>
+	        </form>
         </div>
     </body>
 </html>
