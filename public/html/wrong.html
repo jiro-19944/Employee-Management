@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HEAD>
+	<TITLE>Wrong Password!</TITLE>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/signInSignUp.css">
+</HEAD>
+	<BODY>
+	    <div id="header">
+	    	<div>
+	    		<a href="#" class="header_right">Help</a>
+	    		<a href="#" class="header_right">About</a>
+	    		<a href="#" class="header_right">Home</a>
+	    	</div>
+	    	<div>
+	    		<img id="logo" src="../resources/logo.png">
+	    	</div>
+	    </div>
+        <div class="signInSignUpPosition">
+	        <h1>Wrong Password or Email .....</h1>
+	        <form action="/signIn" method="post">
+	    		<div class="inputs">
+	    			<input type="username" name="username" placeholder="Your username" required>   
+	            	<input type="password" name="password" placeholder="Password" required>
+	            </div>
+	            <div class="actions">
+	            	<input type="submit" class="submit" value="Sign in">
+	            	<label><a id="forgotPass">Forgot password?</a></label>
+	            </div>
+	        </form>
+	        <form action="/signUp" method="post">
+		        <div class="signUpPosition">
+		        	<input type="submit" class="submit" value="Sign up">
+		        </div>
+	        </form>
+        </div>
+    </body>
+</html>

@@ -5,10 +5,8 @@ var mongoDB = {};
 module.exports = {
 	connectToDB: function() {
 		console.log("conecttttttttttttttttt");
-		MongoClient.connect(url, function(err, db)
-		{
-		    if(err)
-		    {
+		MongoClient.connect(url, function(err, db) {
+		    if(err) {
 		    	return console.dir(err);
 		    }
 			mongoDB = db;
