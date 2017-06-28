@@ -1,95 +1,125 @@
-#main
-{
-	background-color: white;
-	overflow: hidden;
-	margin-left: -8px;
-	margin-right: -8px;
+#main {
+    background-color: white;
+    overflow: hidden;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
-#events
-{
-	margin-top: 30px;
-	margin-left: 256px;
+#events {
+    margin-top: 30px;
+    margin-left: 256px;
 }
 
-#events_ul
-{
-	list-style-type: none;
+#events_ul {
+    list-style-type: none;
 }
 
-#events_ul li
-{
-	float: left;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: white;
+#events_ul li {
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
     border-radius: 10px;
 }
 
-#events_ul li button
-{
+#events_ul li button {
     color: #4C87BF;
     outline: 0;
     float: left;
     padding: 5px 20px;
     padding-left: 30px;
     border-radius: 10px;
-	border-style: solid;
+    border-style: solid;
     border-width: 2px;
     border-color: silver;
     background-color: white;
 }
 
 #events_ul li button:active {
-	position: relative;
-	top: 1px;
+    position: relative;
+    top: 1px;
 }
 
-.input_events
-{
-	background-image: url("../resources/plus.jpg");
+.input_events {
+    background-image: url("../resources/plus.jpg");
     background-repeat: no-repeat;
     background-position: 8px;
 }
 
-#third_li
-{
-	float: left;
-	background-image: url("../resources/dropDownIcon.png");
-	background-repeat: no-repeat;
-	background-position: 100px;
+#third_li {
+    float: left;
+    background-image: url("../resources/dropDownIcon.png");
+    background-repeat: no-repeat;
+    background-position: 100px;
 }
 
-#basic_info
-{
-	margin-top: 90px;
-	margin-left: 290px;
-	margin-right: 146px;
+#basic_info {
+    margin-top: 90px;
+    margin-left: 290px;
+    margin-right: 146px;
 }
 
-table, th, td 
-{
-	border: 1px solid black;
-	border-collapse: collapse;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
-#personal_info_table th
-{
-	width: 125px;
-	color: #3096AC;
+#personal_info_table th {
+    width: 125px;
+    color: #3096AC;
 }
 
-#personal_info_table td:first-child img
-{
+#personal_info_table td:first-child img {
     width: 70px;
-	height: 80px;
+    height: 80px;
     content: url("../resources/logo.png");
 }
 
-#personal_info_table td
-{
-	text-align: center;
-	width: 125px;
-	height: 80px;
-	word-spacing: 125px;
+#personal_info_table td {
+    text-align: center;
+    width: 125px;
+    height: 80px;
+    word-spacing: 125px;
+}
+
+#errorTemplate {
+    position: absolute;
+    margin: auto;
+    top: 20%;
+    left: 33%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#errorTemplate h1,
+#errorTemplate h3 {
+    color: #524C5A;
+}
+
+#errorTemplate input {
+    color: #524C5A;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-color: silver;
+    background-color: #4172AA;
+    outline: none;
+}
+
+#errorBody {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("../resources/backgroundError.jpg");
+}
+
+#footer {
+    left: 2%;
+    position: fixed; bottom: 1%;
+}
+
+#footer p {
+    color: #331970;
 }
