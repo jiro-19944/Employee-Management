@@ -1,12 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var controller = require('./controller');
-var db = require("./db");
-var isDbConnected;
-
-if(!isDbConnected) {
-	isDbConnected = db.connectToDB(isDbConnected);
-}
 
 module.exports = function() {
 	router.get('/', controller.home);
@@ -14,6 +8,8 @@ module.exports = function() {
 	router.post('/signIn', controller.signIn);
 	router.post('/signUp', controller.signUp);
 	router.post('/checkUsername', controller.checkUsername);
+	router.post('/updatePass', controller.updatePass);
+	router.all('/*', controller.pageNotFound);
 
 	return router;
 };
