@@ -1,19 +1,6 @@
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/employeeManagement";
-var mongoDB = {};
+var mongoose = require('mongoose'),
+	url = "mongodb://localhost/employeeManagement";
+mongoose.Promise = global.Promise;
+mongoose.connect(url);
 
-module.exports = {
-	connectToDB: function() {
-		MongoClient.connect(url, function(err, db) {
-		    if(err) {
-		    	return console.dir(err);
-		    }
-			mongoDB = db;
-	    });
-		return true;
-	},
-
-	getDB: function() {
-		return mongoDB;
-	}
-};
+module.exports = mongoose;

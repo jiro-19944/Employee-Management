@@ -1,6 +1,6 @@
-var express = require('express');
-var app = express();
-var server = require('http').createServer(app);
+var express = require('express'),
+    app = express(),
+    server = require('http').createServer(app);
 app = require('./config')(app);
 app = require('./index')(app);
 
