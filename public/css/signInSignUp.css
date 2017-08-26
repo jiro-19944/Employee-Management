@@ -1,15 +1,18 @@
-.signInSignUpPosition
-{
+.signInSignUpPosition {
 	width: 20%;
 	margin: auto;
 	text-align:center;
 }
 
-.signUpPosition
-{
+.signUpPosition {
 	margin-top: 35px;
 }
 
 .confirm {
 	margin-top: 2%;
+}
+
+.hiddenInputs {
+    position: fixed;
+    visibility: hidden;
 }

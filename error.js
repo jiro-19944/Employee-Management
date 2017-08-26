@@ -1,14 +1,19 @@
 module.exports.databaseError = function() {
-	console.log('database error');
-	return {
+    console.log('database error');
+    return {
         errorCode: '500',
         errorMessage: 'Internal Server Error',
         message: 'Our service team is working to bring it back online.'
     };
 };
 
-module.exports.collectionError = function() {
-	console.log('database collection error');
+module.exports.wrongUsername = function() {
+    console.log('Wrong username');
+    return {
+        errorCode: '500',
+        errorMessage: 'Internal Server Error',
+        message: 'Our service team is working to bring it back online.'
+    };
 };
 
 module.exports.callbackError = function() {

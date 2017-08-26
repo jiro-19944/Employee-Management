@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<HEAD>
+	<TITLE>Forgot Password!</TITLE>
+	<link rel='stylesheet' type='text/css' href='../css/header.css'>
+	<link rel='stylesheet' type='text/css' href='../css/signInSignUp.css'>
+	<script src='../lib/jquery-2.1.3.min.js'></script>
+	<script src='../js/forgotPass.js'></script>
+</HEAD>
+	<BODY>
+	    <div id='header'>
+	    	<div>
+	    		<a href='#' class='header_right'>Help</a>
+	    		<a href='#' class='header_right'>About</a>
+	    		<a href='#' class='header_right'>Home</a>
+	    	</div>
+	    	<div>
+	    		<img id='logo' src='../resources/logo.png'>
+	    	</div>
+	    </div>
+        <div class='signInSignUpPosition'>
+	        <h1>Do you forgot your password?</h1>
+	        <div id='forForm'>
+	        	<form id='form' action='http://localhost:8080/user/updatePass' method='post'>
+					<div id="addInputs" class="inputs">
+						<input id="newPass" type="password" name="newPass" placeholder="New password" required>
+						<input id="confirmPass" class="confirmPass" type="password" name="confirmPass" placeholder="Confirm password" required>
+					</div>
+					<div id='addButtons' class='actions'>
+						<button id='submitForgot' class='submit' type='submit' form="form">Next</button>
+					</div>
+		        </form>
+	        </div>
+        </div>
+    </body>
+</html>

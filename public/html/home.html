@@ -13,7 +13,7 @@
 			    <a id="signinTrigger" href="#">Sign in <span id="signInSpan" class="span">▼</span>
 			    </a> |
 			    <div id="signinContent" class="adminContent nonClicking">
-			    	<form action="/signIn" method="post">
+			    	<form action="/user/signIn" method="post">
 						<div class="inputs nonClicking">
 							<input id="signInUsername" class="nonClicking" type="username" name="username" placeholder="Your username" required>   
 							<input id="signInPassword" class="nonClicking" type="password" name="password" placeholder="Password" required>
@@ -29,7 +29,7 @@
 				<a id="signupTrigger" href="#">Sign up <span id="signUpSpan" class="span">▼</span>
 				</a> |
 					<div id="signupContent" class="adminContent nonClicking" style="right: 119px">
-					<form action="/signUp" method="post" id="questions">
+					<form action="/user/signUp" method="post" id="questions">
 						<div class="inputs" class="nonClicking">
 							<input id="signUpUsername" class="nonClicking" pattern=".{5,20}" title="username must contain min 5 max 20 characters" type="username" name="username" placeholder="Your username" required>
 							<input id="signUpPassword" class="nonClicking" pattern=".{5,20}" title="password must contain min 5 max 20 characters" type="password" name="password" placeholder="Password" required>

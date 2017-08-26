@@ -1,11 +1,12 @@
-var path = require('path');
-var bodyParser = require('body-parser');
-var express = require('express');
-var multer = require('multer');
+var path = require('path'),
+	bodyParser = require('body-parser'),
+	express = require('express'),
+	session = require('express-session'),
+	multer = require('multer'),
+	config = require('./config.json');
 
 module.exports = function(server) {
 		  // html renderer
-		 
 		  server.set('views', path.join(__dirname, './public'));
 		  server.set('view engine', 'ejs');
 		  server.engine('html', require('ejs').renderFile);
@@ -21,5 +22,12 @@ module.exports = function(server) {
 					 extended: true
 		  }));
 		  server.use(parser.array());
+		  server.use(session({
+			  secret: config.session.secret,
+			  key: config.session.key,
+			  cookie: config.session.cookie,
+			  resave: config.session.resave,
+			  saveUninitialized: config.session.saveUninitialized
+		  }));
 		  return server;
 };

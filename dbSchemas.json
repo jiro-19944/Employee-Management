@@ -16,6 +16,11 @@
     "answer": {
       "type": "String",
       "required": true
+    },
+    "sessionIDs": {
+      "type": ["String"],
+      "unique": true,
+      "required": true
     }
   }
 }

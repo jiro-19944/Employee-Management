@@ -3,7 +3,7 @@
 	<TITLE>Forgot Password!</TITLE>
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/signInSignUp.css">
-	<script src="../lib/jquery-3.1.1.min.js"></script>
+	<script src="../lib/jquery-2.1.3.min.js"></script>
 	<script src="../js/forgotPass.js"></script>
 </HEAD>
 	<BODY>
@@ -19,12 +19,14 @@
 	    </div>
         <div class="signInSignUpPosition">
 	        <h1>Do you forgot your password?</h1>
-	        <div>
-	    		<div id="addInputs" class="inputs">
-	    			<input id="username" type="username" name="username" placeholder="Your username" required>
-	            </div>
+	        <div id="forForm">
+	        	<form id="form" action="http://localhost:8080/user/updatePass" method="post">
+		    		<div id="addInputs" class="inputs">
+		    			<input id="username" type="username" name="username" placeholder="Your username" required>
+		            </div>
+		        </form>
 	            <div id="addButtons" class="actions">
-	            	<button id="submitForgot" class="submit">Next</button>
+	            	<button id="submitForgot" class="submit" type="button">Next</button>
 	            </div>
 	        </div>
         </div>

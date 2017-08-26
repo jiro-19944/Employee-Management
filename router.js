@@ -1,15 +1,23 @@
-var express = require('express');
-var router = express.Router();
-var controller = require('./controller');
+var express = require('express'),
+	homeRouter = express.Router(),
+	userRouter = express.Router(),
+	userController = require('./userController'),
+	dataController = require('./dataController');
 
-module.exports = function() {
-	router.get('/', controller.home);
-	router.get('/forgot', controller.forgot);
-	router.post('/signIn', controller.signIn);
-	router.post('/signUp', controller.signUp);
-	router.post('/checkUsername', controller.checkUsername);
-	router.post('/updatePass', controller.updatePass);
-	router.all('/*', controller.pageNotFound);
+module.exports.user = function() {
+	userRouter.get('/forgot', userController.forgot);
+	userRouter.post('/signIn', userController.signIn);
+	userRouter.post('/signUp', userController.signUp);
+	userRouter.get('/signOut', userController.signOut);
+	userRouter.post('/checkUsername', userController.checkUsername);
+	userRouter.post('/updatePass', userController.updatePass);
 
-	return router;
+	return userRouter;
+};
+
+module.exports.home = function() {
+	homeRouter.get('/', dataController.home);
+	homeRouter.all('/*', dataController.pageNotFound);
+
+	return homeRouter;
 };

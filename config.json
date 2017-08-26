@@ -1,0 +1,13 @@
+{
+	"session": {
+		"secret": "armenianSecret",
+		"key": "sid",
+        "cookie": {
+          "path": "/",
+          "httpOnly": true,
+          "maxAge": null
+        },
+        "resave": true,
+        "saveUninitialized": true
+	}
+}
